@@ -1,0 +1,48 @@
+{
+  "name": "BooksCitationRemover",
+  "version": "1.0",
+  "author": "aeki-yi",
+  "license": "GNU v3.0",
+  "homepage": "https://github.com/Aeki-yi/Books.app-Citation-Remover",
+  "tagline": "Remove “Excerpt From / Copyright” clutter when copying from Books.app",
+  "description": "Intercepts ⌘-C in Apple Books and automatically strips the “Excerpt From … This material may be protected by copyright” lines, as well as the leading/closing smart quotes, before the text is placed on the clipboard.",
+  "category": "Productivity",
+  "keywords": ["clipboard", "automation", "Books.app", "text-clean", "copyright"],
+  "methods": [
+    {
+      "name": "start",
+      "desc": "Activate the event-tap listener so that copied text from Books.app is cleaned automatically.",
+      "params": [],
+      "returns": []
+    },
+    {
+      "name": "stop",
+      "desc": "Deactivate the event-tap listener and restore normal ⌘-C behaviour.",
+      "params": [],
+      "returns": []
+    }
+  ],
+  "functions": [],
+  "variables": [
+    {
+      "name": "booksAppNames",
+      "type": "table",
+      "desc": "Hash-table of localised Books.app bundle names that should trigger the cleaner. Keys are app names, values are booleans (true = enable). Edit this table to support additional UI languages."
+    },
+    {
+      "name": "excerptMarkers",
+      "type": "table",
+      "desc": "Array of keyword-groups that identify the copyright ‘excerpt’ block. Each element is an array; **all** keywords in that sub-array must be found to trigger cleaning."
+    },
+    {
+      "name": "leftQuote",
+      "type": "string",
+      "desc": "The opening smart-quote character that marks the first character of a copied quotation (default “ or 「, depending on locale). Change this if your system uses different quotation marks."
+    },
+    {
+      "name": "rightQuote",
+      "type": "string",
+      "desc": "The closing smart-quote character that marks the end of the quotation. Must match the language environment."
+    }
+  ]
+}
