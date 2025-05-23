@@ -1,9 +1,9 @@
 {
-  "name": "BooksCitationCleaner",
+  "name": "BooksCitationRemover",
   "version": "1.0",
-  "author": "aekiyi",
-  "license": "MIT",
-  "homepage": "https://github.com/your-repo/BooksCitationCleaner",
+  "author": "aeki-yi",
+  "license": "GNU v3.0",
+  "homepage": "https://github.com/Aeki-yi/Books.app-Citation-Remover",
   "tagline": "Remove “Excerpt From / Copyright” clutter when copying from Books.app",
   "description": "Intercepts ⌘-C in Apple Books and automatically strips the “Excerpt From … This material may be protected by copyright” lines, as well as the leading/closing smart quotes, before the text is placed on the clipboard.",
   "category": "Productivity",
